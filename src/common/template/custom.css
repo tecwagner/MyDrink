@@ -1,0 +1,53 @@
+.main-footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.content {
+    border: 1px solid;
+    border-radius: 10px;
+    margin-top: 15px;
+    border-color: rgb(230, 226, 226);
+}
+
+/* Cards  */
+
+.Cards {
+    display: flex;
+    flex-wrap: wrap; /*Quebra de linha resonsivo dos card */
+    justify-content: center;
+}
+
+.Card {    
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px; /* Espaçao entre os card*/
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    max-width: 250px;
+}
+
+.Card .Title {
+    border: 1px solid;
+    padding: 3px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.Card .Content {
+    background-color: rgb(221, 220, 216);
+    color: black;
+    border: 1px solid;
+    padding: 10px;
+    flex-grow: 1;
+    border-radius: 10px;
+    margin: 20px; /* Espaçao entre os card*/
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
