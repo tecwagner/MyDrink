@@ -1,12 +1,14 @@
 import { combineReducers } from 'redux';
 
-import OrdinaryDrinkReducer from '../ordinaryDrink/ordinaryReducer';
 import CocketeisReducer from '../cocketeis/cocketeisReducer'
+// import OrdinaryDrinkReducer from '../ordinaryDrink/ordinaryReducer'
 
+//resultado de todos os reducers da app
 const rootReducer = combineReducers({
 
-    ordinaryDrink: OrdinaryDrinkReducer,
+
     cocketeis: CocketeisReducer
+    // ordinary: OrdinaryDrinkReducer
 
 })
 

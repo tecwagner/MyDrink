@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getCocketeisDrink } from '../cocketeis/cocketeisAction'
+import { getMediaImagen } from '../cocketeis/imagesAction'
 
 import Content from '../common/template/content'
 import ContentHeader from '../common/template/contentHeader'
@@ -12,51 +13,31 @@ import '../common/template/custom.css'
 class Cocketeis extends Component {
 
 
-    // componentWillMount() {
+    componentWillMount() {
 
-    //     this.props.getCocketeisDrink()
+        this.props.getCocketeisDrink()
 
-    // }
+    }
 
-    render() {
-
-        const listItem = this.props.cocketeis
-        // console.log(this.props.cocketeis, 'item')
-
-
-        // listItem.drinks.map(() => {
-        //     // events.strDrink,
-        //     // events.strDrinkThumb
-        //     // console.log(, 'list')
-
-        // })
-
+    render() {  
 
         return (
             <div>
                 <ContentHeader title='Cocketeis' />
                 <Content >
                     {/* <h1>Teste</h1> */}
-                    <div className='Cards'>
+                    <div className='Cards'>                     
 
-                        {/* <Card
-                        strDrink={`${listItem}`}
-                        // strDrink={`${strDrink}`}
-                        // strDrinkThumb={`${strDrinkThumb}`}
-                        /> */}
-
-                        {console.log(listItem, 'tese')}
-
-
-
-                        {/* {listItem.map( itens =>
-                            console.log(itens, 'list'),
+                        {this.props.cocketeis.map( (itens) => 
                             
-                            // <Card
-                            //     strDrink={`${itens.strDrink}`}
-                            //     strDrinkThumb={`${itens.strDrinkThumb}`}
-                            // />
-                        )}  */}
+                            <div>
+                                <Card
+                                    strDrink={`${itens.strDrink}`}
+                                    strDrinkThumb={`${itens.strDrinkThumb}`}
+                                />
+                            </div>                        
+                            
+                        )} 
 
                     </div>
                 </Content>
@@ -69,12 +50,16 @@ class Cocketeis extends Component {
 
 }
 
-const mapStateToProps = state => ( console.log(state, 'state'), {
-    cocketeis: state.cocketeis
+const mapStateToProps = state => (console.log(state, 'state'), {
+
+    //mapear o estado do componente
+    cocketeis: state.cocketeis.drinks,
+    nameImages: state
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-    getCocketeisDrink
+    getCocketeisDrink,
+    getMediaImagen
 }, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(Cocketeis)
 // export default connect(mapStateToProps, {getCocketeisDrink})(Cocketeis)

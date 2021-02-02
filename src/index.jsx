@@ -12,7 +12,9 @@ import thunk from 'redux-thunk'
 
 //applyMiddleware(promise) = Para o ciclo e resolve a promise 
 //applyMiddleware(promise) = Retorna um função cujo o parametro, é createStore e retorna uma função cujo o valor é o reducer / resultado disso tudo é a 'store'
-const store = applyMiddleware(promise, multi, thunk)(createStore)(reducers)
+
+const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+const store = applyMiddleware(promise, multi, thunk)(createStore)(reducers, devTools)
 
 ReactDOM.render(
     <Provider store = {store}>

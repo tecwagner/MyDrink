@@ -1,14 +1,14 @@
 const INITIAL_STATE = {
-    drinks: []     
+    nameImages: ''    
 }
 
 export default (state = INITIAL_STATE, action) => {   
 
     switch (action.type) {
-        case 'COCKETEIS_REQUEST':
+        case 'IMAGES_REQUEST':
             return {
                 ...state, 
-                drinks: action.payload.drinks
+                nameImages: action.payload
             }    
         default:
             return state
