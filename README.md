@@ -1,2 +1,2 @@
-# drinkFast
+# MyDrink
 Catalogo de bebidas
