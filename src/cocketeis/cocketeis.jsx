@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getCocketeisDrink } from '../cocketeis/cocketeisAction'
-import { getMediaImagen } from '../cocketeis/imagesAction'
 
 import Content from '../common/template/content'
 import ContentHeader from '../common/template/contentHeader'
@@ -53,13 +52,11 @@ class Cocketeis extends Component {
 const mapStateToProps = state => (console.log(state, 'state'), {
 
     //mapear o estado do componente
-    cocketeis: state.cocketeis.drinks,
-    nameImages: state
+    cocketeis: state.cocketeis.drinks
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-    getCocketeisDrink,
-    getMediaImagen
+    getCocketeisDrink
 }, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(Cocketeis)
 // export default connect(mapStateToProps, {getCocketeisDrink})(Cocketeis)
