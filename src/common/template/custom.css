@@ -7,8 +7,23 @@
 .content {
     border: 1px solid;
     border-radius: 10px;
-    margin-top: 25px;
+    margin-top: 20px;
     border-color: rgb(230, 226, 226);
+}
+
+.content-header {
+    display: flex;
+    justify-content: flex-start;
+    /* margin-left: 5px; */
+    width: 50%;
+    height: 15%;
+    margin-top: 15px;
+}
+
+.filter {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 /* Cards  */
@@ -51,6 +66,17 @@
     align-items: center;
 }
 
+.sidebar-form {
+    display: flex;
+    align-items: flex-end;
+    border-top-right-radius: 2px;
+}
 
+.form-control {
+    margin-top: 20px;
+}
 
+.btn {
+    margin-top: 20px;
+}
 

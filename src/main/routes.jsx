@@ -9,12 +9,11 @@ import ListGin from '../listIngredients/listIngredientsGin'
 export default props => (
     
     <Router history={hashHistory}>
-        {/* <Route path='/'  exact/> */}
         {/* <Route path='/ordinary' component={Ordinary} /> */}
-        <Route path='/' component={Cocketeis} />
+        <Route path='/cocketeis' component={Cocketeis} />
         <Route path='/listCategoriesVodka' component={ListVodka} />
         <Route path='/listCategoriesGin' component={ListGin} />
-        <Redirect from='*' to='/' />
+        <Redirect from='*' to='/cocketeis' />
     </Router>
 
 )
