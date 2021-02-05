@@ -17,9 +17,9 @@ export default function Card(props) {
                     {props.strDrink}
                 </div>
                 <div className='Content'>
-                    <a href=" ">
+                    {/* action */}
                     <img src={props.strDrinkThumb} height="210" width="210" />
-                    </a>
+                    
                 </div>
             </div>
         </div>
